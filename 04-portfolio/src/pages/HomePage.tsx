@@ -60,7 +60,7 @@ export function HomePage() {
         <Reveal>
           <p className="eyebrow">Уже сделано</p>
           <h2 className="display display--page">Открытые работы</h2>
-          <p className="lead">Можно открыть и проверить. С начала 2026 работаю в агентстве QLAN.</p>
+          <p className="lead">Можно открыть и проверить. С февраля 2026 работаю в агентстве QLAN.</p>
         </Reveal>
         <div className="cards" style={{ marginTop: "1.6rem" }}>
           {work.map((item) => (

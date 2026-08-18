@@ -3,6 +3,7 @@ import { AccordionList, FitQuiz, StackFilter, ToolkitSection } from "@/component
 import { PageHero, Reveal } from "@/components/Reveal";
 import { usePageMeta } from "@/hooks/usePageMeta";
 import {
+  education,
   experience,
   firstMonth,
   fitBest,
@@ -146,6 +147,24 @@ export function EmployerPage() {
             </article>
           </Reveal>
         ))}
+      </section>
+
+      <section className="section container">
+        <Reveal>
+          <p className="eyebrow">Образование</p>
+          <h2 className="display display--page">Университет</h2>
+        </Reveal>
+        <Reveal>
+          <article className="job">
+            <h3>{education.school}</h3>
+            <p className="muted">{education.period}</p>
+            <ul>
+              <li>Направление: {education.program}</li>
+              <li>Профиль: {education.profile}</li>
+              <li>{education.note}</li>
+            </ul>
+          </article>
+        </Reveal>
       </section>
 
       <section className="section container">

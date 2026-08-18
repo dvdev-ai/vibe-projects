@@ -11,6 +11,7 @@ export function ContactPage() {
 
   const hasEmail = Boolean(contact.email);
   const hasTelegram = Boolean(contact.telegram);
+  const hasPhone = Boolean(contact.phone);
 
   async function copyPitch() {
     await copyText(hrPitch);
@@ -31,8 +32,13 @@ export function ContactPage() {
             <h3>{profile.name}</h3>
             <p className="muted">{profile.location} · {profile.role}</p>
             <div className="hero__actions">
+              {hasPhone ? (
+                <a className="btn btn--solid" href={`tel:${contact.phoneHref}`}>
+                  {contact.phone}
+                </a>
+              ) : null}
               {hasEmail ? (
-                <a className="btn btn--solid" href={`mailto:${contact.email}`}>
+                <a className="btn btn--ghost" href={`mailto:${contact.email}`}>
                   {contact.email}
                 </a>
               ) : null}
